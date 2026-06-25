@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
 
-const Product = ({ product }) => {
+const Product = ({ product,carts,setCarts }) => {
  const [isSubscribe,setIsSubscribe] = useState(false)
  const handleBuyNowBtn =()=>{
-    setIsSubscribe(true)
+    setIsSubscribe(true);
+    
+    setCarts([...carts,product]);
+    
 
  }
   return (

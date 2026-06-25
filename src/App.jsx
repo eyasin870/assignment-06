@@ -13,11 +13,13 @@ const getProducts = async () => {
 const productPromise = getProducts();
 
 function App() {
-  const [activeTab,setActiveTab]= useState("Products")
-  console.log(activeTab)
+  const [activeTab,setActiveTab]= useState("Products");
+  const [carts,setCarts]= useState([])
+  console.log(carts)
+  
   return (
     <>
-      <Navber />
+      <Navber carts={carts}/>
       <Banner />
       <Impact />
    
@@ -34,12 +36,12 @@ function App() {
           type="radio"
           name="my_tabs_1"
           className="tab rounded-full w-40 "
-          aria-label="Cart (2)"
+          aria-label={`Cart (${carts.length})`}
           onClick={()=>setActiveTab("cart")}
         />
       </div>
-      {activeTab === "Products" && <Products productPromise={productPromise} />}
-      {activeTab === "cart" && <Cart/>}
+      {activeTab === "Products" && <Products setCarts={setCarts} carts={carts} productPromise={productPromise} />}
+      {activeTab === "cart" && <Cart setCarts={setCarts} carts={carts}/>}
     </>
   );
 }

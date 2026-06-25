@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navber = () => {
+const Navber = ({carts}) => {
   return (
     <div className="flex justify-between items-center py-10 container mx-auto">
       <h2 className="p-1 text-4xl font-bold bg-linear-to-r from-[#4f39f6] to-[#9514fa] bg-clip-text text-transparent">
@@ -30,8 +30,8 @@ const Navber = () => {
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
             />{" "}
           </svg>
-          <span className="badge badge-sm indicator-item font-extrabold absolute -top-4 text-xl left-1 text-red-900">
-            
+          <span className="badge badge-sm indicator-item font-extrabold absolute -top-2 text-xl -left-5 text-red-900 bg-transparent text-[14px]">
+            {carts.length}
           </span>
         </div>
         <div>
