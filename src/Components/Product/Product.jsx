@@ -6,7 +6,15 @@ const Product = ({ product,carts,setCarts }) => {
  const handleBuyNowBtn =()=>{
     setIsSubscribe(true);
     
-    setCarts([...carts,product]);
+    const exist = carts.find(cart=>cart.id === product.id)
+    if(exist){
+      return;
+    }else{
+      setCarts([...carts,product]);
+
+    }
+    
+    
     
 
  }
@@ -57,8 +65,11 @@ const Product = ({ product,carts,setCarts }) => {
           </ul>
           <div className="mt-6">
             <button 
-           onClick={ handleBuyNowBtn}
-            className={`btn  btn-block rounded-full ${isSubscribe?'bg-green-500 text-white':'btn-primary'}`}>{isSubscribe?<IoMdCheckmark />:''} {isSubscribe? 'Added to Cart':'Buy Now'}</button>
+           onClick={handleBuyNowBtn}
+               
+
+           
+            className={`btn  btn-block rounded-full ${isSubscribe?'bg-green-500 text-white':'btn-primary'}`}>{isSubscribe?<IoMdCheckmark />:''} {isSubscribe? 'Added to Cart':'Buy Now'} </button>
           </div>
         </div>
       </div>

@@ -5,6 +5,9 @@ import Impact from "./Components/Impact/Impact";
 import Navber from "./Components/Navber/Navber";
 import Products from "./Components/Products/Products";
 import Cart from "./Components/Cart/Cart";
+import CardTab from "./Components/CardTab/CardTab";
+import WorkFlow from "./Components/WorkFlow/WorkFlow";
+import Footer from "./Components/Footer/Footer";
 
 const getProducts = async () => {
   const res = await fetch("/products.json");
@@ -15,6 +18,7 @@ const productPromise = getProducts();
 function App() {
   const [activeTab,setActiveTab]= useState("Products");
   const [carts,setCarts]= useState([])
+  
   console.log(carts)
   
   return (
@@ -42,6 +46,9 @@ function App() {
       </div>
       {activeTab === "Products" && <Products setCarts={setCarts} carts={carts} productPromise={productPromise} />}
       {activeTab === "cart" && <Cart setCarts={setCarts} carts={carts}/>}
+      <CardTab/>
+      <WorkFlow/>
+      <Footer/>
     </>
   );
 }
