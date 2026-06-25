@@ -31,7 +31,7 @@ const Navber = () => {
             />{" "}
           </svg>
           <span className="badge badge-sm indicator-item font-extrabold absolute -top-4 text-xl left-1 text-red-900">
-            8
+            
           </span>
         </div>
         <div>

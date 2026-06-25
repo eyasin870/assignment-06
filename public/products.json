@@ -1,0 +1,150 @@
+[
+  {
+    "id": "plan-free",
+    "name": "Free",
+    "description": "Explore essential resume tools.\nPerfect for getting started.",
+    "price": 0,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "5+ modern templates",
+      "Basic ATS optimization",
+      "PDF export",
+      "Limited customization"
+    ],
+    "icon": "🌱"
+  },
+  {
+    "id": "plan-starter",
+    "name": "Starter",
+    "description": "Build professional resumes easily.\nIdeal for students and graduates.",
+    "price": 9,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "",
+    "features": [
+      "20+ professional templates",
+      "ATS friendly resumes",
+      "PDF & Word export",
+      "Cover letter builder"
+    ],
+    "icon": "⭐"
+  },
+  {
+    "id": "plan-pro",
+    "name": "Pro",
+    "description": "Unlock advanced career features.\nBest for active job seekers.",
+    "price": 19,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "100+ premium templates",
+      "Advanced ATS optimization",
+      "AI content writer",
+      "Unlimited exports",
+      "LinkedIn optimizer"
+    ],
+    "icon": "🚀"
+  },
+  {
+    "id": "plan-premium",
+    "name": "Premium",
+    "description": "Designed for experienced professionals.\nTake your career to the next level.",
+    "price": 29,
+    "period": "one-time",
+    "tag": "popular",
+    "tagType": "",
+    "features": [
+      "Everything in Pro",
+      "Executive templates",
+      "Industry-specific designs",
+      "AI interview coach",
+      "Priority support"
+    ],
+    "icon": "💎"
+  },
+  {
+    "id": "plan-ultimate",
+    "name": "Ultimate",
+    "description": "Get complete career solutions.\nA lifetime investment in success.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Everything in Premium",
+      "Lifetime updates",
+      "Unlimited AI generations",
+      "Portfolio website builder",
+      "Job application tracker"
+    ],
+    "icon": "👑"
+  },
+  {
+    "id": "plan-pro-monthly",
+    "name": "Pro Monthly",
+    "description": "Enjoy flexible monthly access.\nStay updated with new features.",
+    "price": 12,
+    "period": "monthly",
+    "tag": "best seller",
+    "tagType": "",
+    "features": [
+      "Full Pro access",
+      "Monthly new templates",
+      "Real-time AI suggestions"
+    ],
+    "icon": "🔄"
+  },
+  {
+    "id": "plan-premium-monthly",
+    "name": "Premium Monthly",
+    "description": "Access premium tools anytime.\nMonthly billing with full benefits.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "new",
+    "tagType": "",
+    "features": [
+      "Everything in Premium",
+      "Unlimited AI generations",
+      "Career growth tools",
+      "Portfolio builder"
+    ],
+    "icon": "🔥"
+  },
+  {
+    "id": "plan-pro-yearly",
+    "name": "Pro Yearly",
+    "description": "Save more with annual plans.\nGreat value for serious job hunters.",
+    "price": 99,
+    "period": "yearly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Everything in Pro",
+      "Save 30% compared to monthly",
+      "Exclusive templates",
+      "Career roadmap planner"
+    ],
+    "icon": "🏆"
+  },
+  {
+    "id": "plan-enterprise",
+    "name": "Enterprise",
+    "description": "Built for teams and agencies.\nManage resumes at scale efficiently.",
+    "price": 299,
+    "period": "yearly",
+    "tag": "new",
+    "tagType": "",
+    "features": [
+      "Everything in Ultimate",
+      "Team management",
+      "Custom branding",
+      "Analytics dashboard",
+      "Dedicated account manager",
+      "Bulk resume generation"
+    ],
+    "icon": "🏢"
+  }
+]
