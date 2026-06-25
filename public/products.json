@@ -3,7 +3,7 @@
     "id": "plan-free",
     "name": "Free",
     "description": "Explore essential resume tools.\nPerfect for getting started.",
-    "price": 0,
+    "price": 5,
     "period": "one-time",
     "tag": "popular",
     "tagType": "popular",

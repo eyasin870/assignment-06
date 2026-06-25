@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoMdCheckmark } from "react-icons/io";
 
 const Product = ({ product }) => {
-  // console.log(product)
-  // const {description,features,icon,id,period,price,tag,tagType} = product;
-  // console.log(description,features,icon,id,period,price,tag,tagType)
+ const [isSubscribe,setIsSubscribe] = useState(false)
+ const handleBuyNowBtn =()=>{
+    setIsSubscribe(true)
+
+ }
   return (
     <div>
       <div className="card h-full  w-96 bg-base-100 shadow-sm  ">
@@ -11,10 +14,10 @@ const Product = ({ product }) => {
           <div className="flex justify-end">
             <span
               className={`badge badge-xs
-    ${product.tag === "popular" && "badge-warning"}
-    ${product.tag === "new" && "badge-success"}
-    ${product.tag === "best seller" && "badge-primary"}
-  `}
+                  ${product.tag === "popular" && "badge-warning"}
+                     ${product.tag === "new" && "badge-success"}
+                      ${product.tag === "best seller" && "badge-primary"}
+                     `}
             >
               {product.tag}
             </span>
@@ -29,8 +32,8 @@ const Product = ({ product }) => {
             {product.period}
           </div>
           <ul className="mt-6 flex flex-col gap-2 text-xs">
-            {product.features.map((featuer) => (
-              <li>
+            {product.features.map((featuer,id) => (
+              <li key={id}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="size-4 me-2 inline-block text-success"
@@ -50,7 +53,9 @@ const Product = ({ product }) => {
             ))}
           </ul>
           <div className="mt-6">
-            <button className="btn btn-primary btn-block">Subscribe</button>
+            <button 
+           onClick={ handleBuyNowBtn}
+            className={`btn  btn-block rounded-full ${isSubscribe?'bg-green-500 text-white':'btn-primary'}`}>{isSubscribe?<IoMdCheckmark />:''} {isSubscribe? 'Added to Cart':'Buy Now'}</button>
           </div>
         </div>
       </div>
