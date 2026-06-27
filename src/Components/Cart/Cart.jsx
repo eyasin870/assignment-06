@@ -1,9 +1,11 @@
 import React from "react";
 import { IoCartOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 const Cart = ({ carts, setCarts }) => {
   const totalPrice = carts.reduce((sum, item) => sum + item.price, 0);
   const handlePayment = () => {
+    toast.success("All products removed from your cart!");
     setCarts([]);
   };
   const handleDelete =(cart)=>{

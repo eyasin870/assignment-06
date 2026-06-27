@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const Product = ({ product,carts,setCarts }) => {
  const [isSubscribe,setIsSubscribe] = useState(false)
@@ -8,9 +9,11 @@ const Product = ({ product,carts,setCarts }) => {
     
     const exist = carts.find(cart=>cart.id === product.id)
     if(exist){
+      toast.error("This product is already in your cart!");
       return;
     }else{
       setCarts([...carts,product]);
+      toast.success("Product added to cart!");
 
     }
     

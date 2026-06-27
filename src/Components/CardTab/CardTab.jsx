@@ -68,7 +68,7 @@ const CardTab = () => {
       </div>
       <div className="flex justify-center my-20 gap-2">
         {carts.map((product) => (
-          <div
+          <div key={product.id}
             onClick={() => setActiveCard(product.id)}
             className={`card h-full  w-96 bg-base-100 shadow-sm 
             ${

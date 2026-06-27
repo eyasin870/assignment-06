@@ -8,6 +8,7 @@ import Cart from "./Components/Cart/Cart";
 import CardTab from "./Components/CardTab/CardTab";
 import WorkFlow from "./Components/WorkFlow/WorkFlow";
 import Footer from "./Components/Footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 const getProducts = async () => {
   const res = await fetch("/products.json");
@@ -19,7 +20,7 @@ function App() {
   const [activeTab,setActiveTab]= useState("Products");
   const [carts,setCarts]= useState([])
   
-  console.log(carts)
+  // console.log(carts)
   
   return (
     <>
@@ -49,6 +50,7 @@ function App() {
       <CardTab/>
       <WorkFlow/>
       <Footer/>
+      <ToastContainer />
     </>
   );
 }
